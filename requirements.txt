@@ -1,11 +1,11 @@
 fastapi
 numpy
-opencv-python
-insightface
+opencv-python-headless
 supabase
 dotenv
 uvicorn
-onnxruntime
+insightface==0.7.3
+onnxruntime==1.17.3
 python-multipart
 pydantic
 pydantic_settings

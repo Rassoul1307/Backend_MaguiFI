@@ -79,7 +79,7 @@ def compute_average_embedding_and_upload(photos: List[UploadFile], matricule: st
 
     for idx, photo in enumerate(photos):
         image_bytes = photo.file.read()
-        result = get_embedding_and_crop_from_image(image_bytes)
+        result = get_embedding_and_crop_with_mask(image_bytes)
 
         if result is None:
             photo.file.seek(0)
