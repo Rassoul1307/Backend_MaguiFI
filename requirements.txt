@@ -4,8 +4,8 @@ opencv-python-headless
 supabase
 dotenv
 uvicorn
-insightface==0.7.3
-onnxruntime==1.17.3
+insightface
+onnxruntime
 python-multipart
 pydantic
 pydantic_settings
