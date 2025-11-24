@@ -1,0 +1,6 @@
+fastapi
+numpy
+cv2
+insightface
+supabase
+dotenv
