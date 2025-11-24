@@ -1,6 +1,6 @@
 fastapi
 numpy
-cv2
+opencv-python
 insightface
 supabase
 dotenv
