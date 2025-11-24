@@ -9,3 +9,4 @@ onnxruntime
 python-multipart
 pydantic
 pydantic_settings
+cv2
