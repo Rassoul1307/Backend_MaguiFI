@@ -4,3 +4,8 @@ opencv-python
 insightface
 supabase
 dotenv
+uvicorn
+onnxruntime
+python-multipart
+pydantic
+pydantic_settings

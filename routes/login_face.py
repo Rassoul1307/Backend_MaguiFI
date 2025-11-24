@@ -2,8 +2,8 @@ import json
 import numpy as np
 from fastapi import APIRouter, UploadFile, File, HTTPException, status
 from typing import List
-from app.services.face_service import get_embedding_and_crop_with_mask
-from app.services.supabase_service import supabase
+from services.face_service import get_embedding_and_crop_with_mask
+from services.supabase_service import supabase
 
 
 router = APIRouter(prefix="/login-face", tags=["FaceLogin"])

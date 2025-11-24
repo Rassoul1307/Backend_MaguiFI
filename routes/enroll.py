@@ -2,9 +2,9 @@
 
 from fastapi import APIRouter, Form, UploadFile, File, HTTPException, status
 from typing import List
-from app.services.supabase_service import upload_photos_to_supabase, create_agent_record
+from services.supabase_service import upload_photos_to_supabase, create_agent_record
 # from app.services.face_service import compute_average_embedding
-from app.services.face_service import compute_average_embedding_and_upload
+from services.face_service import compute_average_embedding_and_upload
 
 router = APIRouter(prefix="/enroll", tags=["Enrollment"])
 

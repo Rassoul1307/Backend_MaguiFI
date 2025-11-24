@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from app.routes import enroll
-from app.routes import login_face
+from routes import enroll
+from routes import login_face
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Agent Enrollment API")

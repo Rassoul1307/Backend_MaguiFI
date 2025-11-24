@@ -4,22 +4,22 @@ from typing import List, Tuple
 from supabase import create_client, Client
 from dotenv import load_dotenv
 from fastapi import UploadFile
+from settings import settings # Assurez-vous que le chemin d'importation est correct
 import time
 import io
 
 # Charger .env
 load_dotenv()
 
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-# Nom du bucket stockage où tu veux mettre les photos (crée-le depuis Supabase UI)
-BUCKET_NAME = os.getenv("SUPABASE_BUCKET", "agents-photos")
+# Initialisation du client Supabase
+# Le client est créé en utilisant les valeurs lues par Pydantic depuis l'environnement (Render)
+supabase: Client = create_client(
+    supabase_url=settings.SUPABASE_URL,
+    supabase_key=settings.SUPABASE_SECRET_KEY
+)
 
-if not SUPABASE_URL or not SUPABASE_KEY:
-    raise RuntimeError("Missing SUPABASE_URL or SUPABASE_KEY in environment")
-
-# Création du client Supabase (sync)
-supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+# Le nom du bucket est maintenant lu depuis l'objet settings
+BUCKET_NAME = settings.SUPABASE_BUCKET
 
 
 def _make_path(matricule: str, filename: str) -> str:

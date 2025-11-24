@@ -3,7 +3,7 @@ import cv2
 from typing import List, Tuple
 from fastapi import UploadFile
 from insightface.app import FaceAnalysis
-from app.services.supabase_service import supabase  # ton client Supabase déjà initialisé
+from services.supabase_service import supabase  # ton client Supabase déjà initialisé
 
 # --- Initialisation globale du modèle ---
 face_app = None
