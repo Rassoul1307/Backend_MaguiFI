@@ -13,7 +13,7 @@ print("-> Démarrage du pré-téléchargement du modèle InsightFace 'buffalo_l'
 try:
     # L'appel à l'instanciation force le téléchargement du modèle s'il n'existe pas.
     # Nous n'avons besoin de rien faire avec l'objet, juste que la ligne s'exécute.
-    app = FaceAnalysis(name='buffalo_l')
+    app = FaceAnalysis(name='buffalo_s')
     
     print("-> Pré-téléchargement du modèle 'buffalo_l' terminé avec succès.")
     
